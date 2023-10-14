@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #ffebd2;
+}
+
+article section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.section1 {
+    background: #ffa364;
+}
+
+.section1 .btn-modal {
+    background: #ffebd2;
+    border: none;
+    color: #494848;
+    font-size: 18px;
+    border-radius: 25px;
+    width: 150px;
+    height: 60px;
+    margin: 0 30px;
+    cursor: pointer;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.section1 .btn-modal:hover {
+    background: #943d2c;
+    color: #ffebd2;
+}
+
+.section1 .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffebd2;
+    width: 50%;
+    height: 350px;
+    padding: 20px;
+}
+
+.modal-content .modal-header .btn-close {
+    float: right;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: #ffa364;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.modal-header .btn-close:hover {
+    background: #943d2c;
+    transition: .2s ease-in-out;
+}
+
+.modal-content .modal-body {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content .modal-body h1 {
+    color: #943d2c;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
